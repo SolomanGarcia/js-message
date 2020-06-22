@@ -4,5 +4,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
   const input = document.querySelector("#message-input");
   const encrytped = btoa(input.value);
 
-  document.querySelector("#link-input").value = encrytped;
+  document.querySelector(
+    "#link-input"
+  ).value = `${window.location}#${encrytped}`;
 });
